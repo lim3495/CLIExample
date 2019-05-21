@@ -46,20 +46,19 @@ public class Runner {
 				// TODO list all files in the path
 				
 				System.out.printf("all files in the path");
-				for(File fl : file.listFiles() )
-					System.out.println(fl.getName());
 				
+				for(File fl : file.listFiles()) {
+					if(fullpath) 
+						System.out.println("Full path in the directory : "+fl.getAbsolutePath());
+					else
+						System.out.println("file name : "+fl.getName());
 				
+				}
+		
 				
 				System.out.println("Your program is terminated. (This message is shown because you turned on -v option!");
 			}
-			
-			if(fullpath) {
-				
-				for(File fl : file.listFiles())
-					System.out.println("Full path in the directory : "+fl.getAbsolutePath());
 		
-			}
 		
 		}
 	}
